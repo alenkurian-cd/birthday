@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <!-- Social Meta Tags -->
+    <meta property="og:title" content="A Special Birthday Surprise">
+    <meta property="og:description" content="A magical journey through our favorite memories.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,200;0,400;0,600;1,400&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="heart-loader"></div>
+            <h2 class="loading-title">For You...</h2>
+            <div class="progress-bar-container">
+                <div id="progress" class="progress"></div>
+            </div>
+            <p id="loading-text" class="handwriting">Gathering magic, memories, and stardust...</p>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Audio Player -->
+    <div id="audio-controls" class="hidden">
+        <button id="play-pause-btn" aria-label="Play Music">
+            <span class="icon">♪</span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main id="journey">
+        <!-- Act I: The Enchantment -->
+        <section id="act1-entrance" class="section">
+            <div class="entrance-content fade-in-up">
+                <h1 class="magical-title"><span id="recipient-name">My Love</span></h1>
+                <p class="subtitle" id="entrance-message">A journey through our magical moments</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to begin</span>
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Act II: The Heart Connection -->
+        <section id="act2-message" class="section">
+            <div class="scroll-container interactable reveal" id="magical-scroll">
+                <div class="scroll-top"></div>
+                <div class="scroll-paper">
+                    <div class="scroll-content">
+                        <p class="handwriting typewriter-text" id="heart-letter"></p>
+                        <p class="signature handwriting" id="sender-signature"></p>
+                    </div>
+                </div>
+                <div class="scroll-bottom"></div>
+                <!-- Ribbon overlay -->
+                <div class="scroll-ribbon">
+                    <div class="bow">🎀</div>
+                    <span>Tap to Unroll</span>
+                </div>
+            </div>
+
+            <div class="love-timer-container reveal fade-in-up">
+                <h3 class="handwriting">We've been writing our story for:</h3>
+                <div id="love-timer" class="timer-display modern-text"></div>
+            </div>
+        </section>
+
+        <!-- Act III: The Memory Tapestry -->
+        <section id="act3-memories" class="section tapextry-bg">
+            <h2 class="section-title reveal handwriting">Our Precious Memories</h2>
+            <div id="memory-gallery" class="gallery">
+                <!-- Memories injected via JS -->
+            </div>
+        </section>
+
+        <!-- Intermission: Marquee -->
+        <div class="marquee-wrapper">
+            <div class="marquee-content handwriting" id="marquee-text">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+
+        <!-- Act IV: The Spotlight -->
+        <section id="act4-spotlight" class="section dark-mode">
+            <div class="spotlight-container reveal">
+                <div class="spotlight-beam"></div>
+                <div class="favorite-memory" id="favorite-memory">
+                    <!-- Fav memory injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Act V: The Celebration -->
+        <section id="act5-celebration" class="section celebration">
+            <h2 class="section-title reveal">Make a Wish!</h2>
+            <div class="cake-container reveal interactable" id="birthday-cake">
+                <div class="cake">
+                    <div class="frosting"></div>
+                    <!-- Candles injected via JS -->
+                </div>
+                <p class="instruction">Tap the candles to blow them out!</p>
+            </div>
+        </section>
+
+        <!-- Act V.5: The Reasons -->
+        <section id="act5-reasons" class="section">
+            <h2 class="section-title reveal handwriting">Why I Love You</h2>
+            <div class="reasons-grid" id="reasons-container">
+                <!-- Cards injected via JS -->
+            </div>
+        </section>
+
+        <!-- Act VI: The Future Promise -->
+        <section id="act6-future" class="section">
+            <div class="time-capsule reveal interactable">
+                <div class="capsule-visual">⏳</div>
+                <h3 class="handwriting">A promise for tomorrow</h3>
+                <p id="future-promise" class="modern-text"></p>
+            </div>
+        </section>
+
+        <!-- Act VII: The Declaration -->
+        <section id="act7-declaration" class="section final-climax">
+            <div class="heartbeat-container reveal">
+                <h1 class="ultimate-declaration" id="ultimate-declaration">I LOVE YOU</h1>
+            </div>
+        </section>
+
+        <!-- Epilogue -->
+        <section id="epilogue" class="section">
+            <div class="epilogue-content reveal">
+                <p class="handwriting">Let's make more memories...</p>
+                <button id="replay-btn" class="btn">Experience again</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
